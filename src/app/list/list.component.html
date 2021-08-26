@@ -1,0 +1,26 @@
+<p>list works!</p>
+
+<div>
+    <button (click)='addTask()'>Add task</button>
+</div>
+
+<div *ngFor='let task of taskList;let i=index'>
+    <div>
+        <span>task num : {{i+1}}</span>
+    </div>
+
+    <div>
+        <button (click)='removeTask(i)'> X</button>
+    </div>
+
+
+    <div>
+        <span>title:</span>
+        <input [(ngModel)]='task.title' type='text'>
+    </div>
+    <div>
+        <div>description</div>
+        <input [(ngModel)]='task.description' type="text">
+    </div>
+
+</div>
